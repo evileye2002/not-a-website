@@ -8,10 +8,10 @@
 :root{
 	--body-color: #18191A;
 	--sidebar-color: #242526;
-	--primary-color: #CCC;
+	--primary-color: #CCCCCC;
 	--primary-color-light: #3A3B3C;
-	--toggle-color: #FFF;
-	--text-color: #CCC;
+	--toggle-color: #FFFFFF;
+	--text-color: #CCCCCC;
 	
 	--tran-02: all 0.2s ease;
 	--tran-03: all 0.3s ease;
@@ -26,10 +26,10 @@ body{
 
 body.light{
 	--body-color: #E4E9F7;
-	--sidebar-color: #FFF;
+	--sidebar-color: #FFFFFF;
 	--primary-color: #695CFE;
 	--primary-color-light: #F6F5FF;
-	--toggle-color: #DDD;
+	--toggle-color: #DDDDDD;
 	--text-color: #707070;
 }
 
@@ -46,6 +46,29 @@ body.light{
 	padding: 10px 14px;
 	background: var(--sidebar-color);
 	transition: var(--tran-05);
+}
+
+.sidebar header .toggle{
+	position: absolute;
+	top: 50%;
+	right: -25px;
+	transform: translateY(-50%) rotate(180deg);
+	height: 30px;
+	width: 22px;
+	background: var(--primary-color-light);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 50%;
+	color: var(--text-color);
+	font-size: 22px;
+}
+
+.home .text{
+	font-size: 30px;
+	font-weight: 500;
+	color: var(--text-color);
+	padding: 8px 40px;
 }
 
 .sidebar.close{
@@ -72,6 +95,27 @@ body.light{
 	justify-content: center;
 }
 
+.sidebar li .icon,
+.sidebar li .text{
+	color: var(--text-color);
+}
+
+.sidebar input{
+	transition: var(--tran-05);
+	white-space: nowrap;
+	opacity: 1;
+}
+
+.search-box input{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	background: var(--primary-color-light);
+  transition: var(tran-05);
+}
+
 .sidebar.close .text{
 	opacity: 0;
 	transition: var(--tran-04);
@@ -80,12 +124,6 @@ body.light{
 .sidebar.close input{
 	opacity: 0;
 	transition: var(--tran-04);
-}
-
-.sidebar input{
-	transition: var(--tran-05);
-	white-space: nowrap;
-	opacity: 1;
 }
 
 .sidebar li{
@@ -103,10 +141,7 @@ body.light{
 	min-width: 60px;
 	font-size: 20px;
 }
-.sidebar li .icon,
-.sidebar li .text{
-	color: var(--text-color);
-}
+
 
 .sidebar li a{
 	height: 100%;
@@ -132,13 +167,8 @@ body.light{
 	background: var(--primary-color-light);
 }
 
-.search-box input{
-	height: 100%;
-	weight: 100%;
-	outline: none;
-	border: none;
-	border-radius: 6px;
-	background: var(--primary-color-light);
+.search-box icon{
+  transition: var(tran-05);
 }
 
 .search-box .sb-text{
@@ -170,22 +200,6 @@ header .image-text .header-text{
 
 .header-text .profession{
 	margin-top: -2px;
-}
-
-.sidebar header .toggle{
-	position: absolute;
-	top: 50%;
-	right: -25px;
-	transform: translateY(-50%) rotate(180deg);
-	height: 30px;
-	weight: 30px;
-	background: var(--primary-color-light);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border-radius: 50%;
-	color: var(--text-color);
-	font-size: 25px;
 }
 
 .sidebar .menu-bar{
@@ -268,13 +282,6 @@ body.light .switch::before{
 	width: calc(100% - 250px);
 	background: var(--primary-light-color);
 	transition: var(--tran-05);
-}
-
-.home .text{
-	font-size: 30px;
-	font-weight: 500;
-	color: var(--text-color);
-	padding: 8px 40px;
 }
 
 .sidebar.close ~ .home{
