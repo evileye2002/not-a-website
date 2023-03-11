@@ -276,7 +276,8 @@ body.light .switch::before{
 	height: 100vh;
 	left: 250px;
 	width: calc(100% - 250px);
-	background: var(--primary-light-color);
+	background-image: url("background_pic.jpg");
+	background-size: cover;
 	transition: var(--tran-05);
 }
 
