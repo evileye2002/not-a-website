@@ -167,10 +167,6 @@ body.light{
 	background: var(--primary-color-light);
 }
 
-.search-box icon{
-  transition: var(tran-05);
-}
-
 .search-box .sb-text{
 	color: var(--text-color);
 }
